@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <title>The Workout Shop</title>
+</head>
+<body>
+  <header id="showcase">
+    <h1>The Workout Shop</h1>
+    <p>E-Sport Shopping cart - Buy perfect Sneakers, Jerseys and power supplements for your workout.</p>
+    <a href="#section1" class="button">Read More</a>
+  </header>
+  <section id="section-1">
+    <a name="section1"></a>
+    <form id="cart-shop" >
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="./Image/Snekars.jpeg" alt="Snekars">
+            <div class="caption">
+              <h3>Sneakers</h3>
+              <p>Run faster, jump higher.</p>
+              <span id="price"> <b>Price:</b> $90/Pair </span>
+              <div>
+                <label for="quantity">Quantity desired:</label>
+                <input type="number" min="0" id="quantity" size="3" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="./Image/jersey.jpeg" alt="jersy">
+            <div class="caption">
+              <h3>Active jerseys</h3>
+              <p>Sweat harder, wick better.</p>
+              <span id="price"class="info"> <b>Price:</b> $25/each </span>
+              <div>
+                <label for="quantity-jersy">Quantity desired:</label>
+                <input type="number" min="0" id="quantity-jersy" size="3" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="./Image/PowerSuplements.jpg" alt="Power Suplements">
+            <div class="caption">
+              <h3>Power Supplements</h3>
+              <p>Get healthier, get smater.</p>
+              <span id="price"class="info"> <b> Price:</b> $30/bottle </span>
+              <div>
+                <label for="quantity-power">Quantity desired:</label>
+                <input type="number" min="0" id="quantity-power" size="3" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+  <section id="section-2">
+
+    <div class="jumbotron">
+      <form class="cart" id="cart-shop" >
+        <div id="summary">
+          <h2> Estimate Order</h2>
+          <div class="group state" >
+            <label for="s-state">State (required):</label>
+            <select id="s-state" required>
+              <option value> - State -</option>
+              <option value="CA">California (7.5% tax)</option>
+              <option value="IL">Illinois</option>
+              <option value="NH">New Hampshire</option>
+              <option value="PA">Pennsylvania</option>
+            </select>
+          </div>
+          <div class="group method">
+            <label for="method-pickup">Shipping and Handling:</label>
+            <br>
+            <input type="radio" value="pickup" name="r_method" id="method-pickup" checked>
+            <label for="method-pickup">Pickup(free)</label><br>
+            <input type="radio" value="usps" name="r_method" id="method-usps">
+            <label for="method-usps">US mail ($2/item)</label><br>
+            <input type="radio" value="usp" name="r_method" id="method-usps">
+            <label for="method-usps">USP ($3/item)</label>
+          </div>
+          <div class="group special">
+            <label for="special-gift"> Special:</label><br>
+            <input type="checkbox" value="YES" name="special-gift" id="special-gift">
+            <label for="special-gift">This is a gift(include a card)</label><br>
+            <input type="checkbox" value="YES" name="special-email" id="special-email">
+            <label for="special-email">Sign up for the H+ mailing list</label> <br>
+            <input type="checkbox" value="YES" name="special-recipes" id="special-recipes">
+            <label for="special-recipes"> Include H+ recipes(free!)</label><br>
+          </div>
+        </div>
+        <div class="group notes">
+          <label for="text-notes">Other notes:</label><br>
+          <textarea name="text-notes" id="text-notes" rows="2" placeholder="Any other comments (does not effect estimate)"></textarea>
+        </div>
+        <div class="group calc">
+          <p>
+            <label for="estimate-btn">Click to Estimate:</label><br>
+            <input type="submit" value="Estimate Total" id="estimate-btn" ><br>
+            <input type="text" id="estimate-text" placeholder="$0.00">
+          </p>
+          <div id="results"></div>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p> Copyright &copy; The Workout Shop - 2017</p>
+    </footer>
+  </section>
+  <script src="./Script/script.js"></script>
+
+</body>
+</html>
